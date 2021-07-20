@@ -8,16 +8,27 @@
 // If the number is not a multiple of either 3 or 5, the number should be output on its own as shown in the examples below.
 // The output should always be a string even if it is not a multiple of 3 or 5.
 
+// function FizzBuzz(num) {
+//     if(num % 3 === 0 && num % 5 === 0) {
+//         return "FizzBuzz"
+//     } else if(num % 3 === 0) {
+//         return "Fizz"
+//     } else if (num % 5 === 0) {
+//         return "Buzz"
+//     } else {
+//         return num.toString()
+//     }
+// }
+
 function FizzBuzz(num) {
-    if(num % 3 === 0 && num % 5 === 0) {
-        return "FizzBuzz"
-    } else if(num % 3 === 0) {
-        return "Fizz"
-    } else if (num % 5 === 0) {
-        return "Buzz"
-    } else {
-        return num.toString()
+    let result = "";
+    if(num % 3 === 0) {
+        result += "Fizz"
+    } 
+    if(num % 5 === 0) {
+        result += "Buzz"
     }
+    return (result || num.toString())
 }
 
 
